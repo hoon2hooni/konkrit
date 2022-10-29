@@ -1,25 +1,12 @@
 import styled from "styled-components";
 import Ether from "@components/atoms/Ether";
 import useData from "@hooks/useData";
-
-const ScrollCardsWrapper = styled.div`
-  margin-top: 24px;
-  overflow-y: scroll;
-  white-space: nowrap;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-`;
+import HideScrollX from "@components/atoms/HideScrollX";
 
 const CardWrapper = styled.div`
   overflow: hidden;
   border-radius: 16px;
-  display: inline-block;
-  margin-left: 16px;
+  flex-shrink: 0;
 `;
 
 const CardImage = styled.img`
@@ -97,7 +84,7 @@ function Items() {
   }
 
   return (
-    <ScrollCardsWrapper>
+    <HideScrollX>
       {data.items.map((item) => (
         <CardWrapper key={item.id}>
           <CardImage src={item.mediaUrl} alt={item.title} />
@@ -114,7 +101,7 @@ function Items() {
           </PriceBox>
         </CardWrapper>
       ))}
-    </ScrollCardsWrapper>
+    </HideScrollX>
   );
 }
 export default Items;

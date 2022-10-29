@@ -1,15 +1,12 @@
-
 import styled from "styled-components";
 import Items from "@components/organisms/Items";
 
-
 const Container = styled.div`
   width: 100%;
-  padding: 80px 16px 80px 0px;
+  padding: 40px 16px;
 `;
 
 const SectionWrapper = styled.div`
-  margin-left: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +28,6 @@ const ShowAllText = styled.span`
 `;
 
 function ItemsOnSale() {
-  
   return (
     <Container>
       <SectionWrapper>

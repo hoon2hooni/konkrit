@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import EventImageOneUrl from "@assets/image/event_one.png";
 import EventImageTwoUrl from "@assets/image/event_two.png";
 import EventImageThreeUrl from "@assets/image/event_three.png";
-
+import HideScrollX from "@components/atoms/HideScrollX";
 const shine = keyframes`
   from {
     background-position: 0%;
@@ -24,21 +24,6 @@ const EventsTopWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const EventCardsWrapper = styled.div`
-  margin-top: 24px;
-  height: 265px;
-  overflow-x: scroll;
-  display: flex;
-  gap: 16px;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 `;
 
 const GradientAnimationSectionTitle = styled.span`
@@ -80,7 +65,7 @@ function Events() {
         </GradientAnimationSectionTitle>
         <EventLink>이벤트 전체보기</EventLink>
       </EventsTopWrapper>
-      <EventCardsWrapper>
+      <HideScrollX>
         <EventCard
           imgUrl={EventImageOneUrl}
           eventSubTitle={"메디소사이어티 NFT 프로젝트"}
@@ -97,7 +82,7 @@ function Events() {
           eventSubTitle={"Habitus"}
           title={"아비투스 프리미엄 골프 멤버십 NFT"}
         />
-      </EventCardsWrapper>
+      </HideScrollX>
       "
     </Container>
   );
