@@ -35,6 +35,9 @@ const CollectionTitle = styled.div`
   font-size: 12px;
   font-family: Pretendard;
   color: rgba(255, 255, 255, 0.64);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const Title = styled.div`

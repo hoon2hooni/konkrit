@@ -16,8 +16,8 @@ function App() {
       <Events></Events>
       <ItemsOnSale />
       <OpenseaTopCollections />
-      <Onboarding>온보딩</Onboarding>
-      <Footer>푸터</Footer>
+      <Onboarding></Onboarding>
+      <Footer></Footer>
     </>
   );
 }

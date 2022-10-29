@@ -70,7 +70,7 @@ function formatCount(count) {
   }
 }
 
-function EventCard({ targetDate, imgUrl, eventSubTitle, Title }) {
+function EventCard({ targetDate, imgUrl, eventSubTitle, title }) {
   const { days, hours, minutes, seconds, isDone } = useCountdown(targetDate);
   let textContent;
   if (!targetDate) {
@@ -114,8 +114,8 @@ function EventCard({ targetDate, imgUrl, eventSubTitle, Title }) {
         <CountDownWrapper>{textContent}</CountDownWrapper>
       </EventCardWrapper>
       <EventTitles>
-        <EventSubTitle>Medistock</EventSubTitle>
-        <EventTitle>메디소사이어티 NFT 프로젝트</EventTitle>
+        <EventSubTitle>{eventSubTitle}</EventSubTitle>
+        <EventTitle>{title}</EventTitle>
       </EventTitles>
     </div>
   );

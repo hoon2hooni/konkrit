@@ -68,7 +68,7 @@ function Events() {
       <HideScrollX>
         <EventCard
           imgUrl={EventImageOneUrl}
-          eventSubTitle={"메디소사이어티 NFT 프로젝트"}
+          eventSubTitle={"Medistock"}
           targetDate={new Date(2022, 12, 31)}
           title={"메디소사이어티 NFT 프로젝트"}
         />
