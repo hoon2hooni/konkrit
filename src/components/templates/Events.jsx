@@ -13,21 +13,21 @@ const shine = keyframes`
 const Container = styled.div`
   width: 100%;
   height: 398px;
-  padding: 40px 0px;
+  padding: 40px 16px;
 `;
 
 const EventsTopWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 16px;
 `;
 
 const EventCardsWrapper = styled.div`
   margin-top: 24px;
   height: 265px;
-  overflow-y: scroll;
-  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  gap: 16px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -73,11 +73,6 @@ const CountUnit = styled.div`
 
 const EachCountWrapper = styled.div`
   display: flex;
-`;
-
-const InLineBlockWrapper = styled.div`
-  display: inline-block;
-  margin-left: 16px;
 `;
 
 const GradientAnimationSectionTitle = styled.span`
@@ -131,11 +126,13 @@ function Events() {
   return (
     <Container>
       <EventsTopWrapper>
-        <GradientAnimationSectionTitle>KONKRIT Originals</GradientAnimationSectionTitle>
+        <GradientAnimationSectionTitle>
+          KONKRIT Originals
+        </GradientAnimationSectionTitle>
         <EventLink>이벤트 전체보기</EventLink>
       </EventsTopWrapper>
       <EventCardsWrapper>
-        <InLineBlockWrapper>
+        <div>
           <EventCardWrapper>
             <CountDownWrapper>
               <EachCountWrapper>
@@ -160,8 +157,8 @@ function Events() {
             <EventSubTitle>Medistock</EventSubTitle>
             <EventTitle>메디소사이어티 NFT 프로젝트</EventTitle>
           </EventTitles>
-        </InLineBlockWrapper>
-        <InLineBlockWrapper>
+        </div>
+        <div>
           <EventCardWrapper>
             <CountDownWrapper>
               <EachCountWrapper>
@@ -186,8 +183,8 @@ function Events() {
             <EventSubTitle>Medistock</EventSubTitle>
             <EventTitle>메디소사이어티 NFT 프로젝트</EventTitle>
           </EventTitles>
-        </InLineBlockWrapper>
-        <InLineBlockWrapper>
+        </div>
+        <div>
           <EventCardWrapper>
             <CountDownWrapper>
               <EachCountWrapper>
@@ -212,7 +209,7 @@ function Events() {
             <EventSubTitle>Medistock</EventSubTitle>
             <EventTitle>메디소사이어티 NFT 프로젝트</EventTitle>
           </EventTitles>
-        </InLineBlockWrapper>
+        </div>
       </EventCardsWrapper>
     </Container>
   );
