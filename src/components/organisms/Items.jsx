@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Ether from "@components/atoms/Ether";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import useData from "@hooks/useData";
+
 const ScrollCardsWrapper = styled.div`
   margin-top: 24px;
   overflow-y: scroll;
@@ -84,28 +84,11 @@ const PriceText = styled.div`
 `;
 
 function Items() {
-  const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const { data, isLoading, isError } = useData(
+    "http://localhost:3000/api/items"
+  );
 
-  useEffect(() => {
-    async function fetchItems() {
-      setIsLoading(true);
-      setIsError(false);
-      try {
-        const items = await axios("http://localhost:3000/api/items");
-
-        setItems(items.data.items);
-        setIsLoading(false);
-      } catch {
-        setIsError(true);
-        setIsLoading(false);
-      }
-    }
-    fetchItems();
-  }, []);
-  
-  if (isLoading) {
+  if (isLoading || !data) {
     return <div>로딩중</div>;
   }
 
@@ -115,7 +98,7 @@ function Items() {
 
   return (
     <ScrollCardsWrapper>
-      {items.map((item) => (
+      {data.items.map((item) => (
         <CardWrapper key={item.id}>
           <CardImage src={item.mediaUrl} alt={item.title} />
           <InfoBox>

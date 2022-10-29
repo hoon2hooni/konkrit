@@ -1,5 +1,4 @@
 import GlobalStyle from "./GlobalStyle";
-import styled from "styled-components";
 import Header from "@components/templates/Header";
 import TopBanner from "@components/templates/TopBanner";
 import Events from "@components/templates/Events";
