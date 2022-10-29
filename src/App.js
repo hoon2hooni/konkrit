@@ -1,14 +1,7 @@
 import GlobalStyle from "./GlobalStyle";
 import styled from "styled-components";
 import Header from "@components/templates/Header";
-
-const TopBanner = styled.div`
-  margin-top: 64px;
-  width: 100%;
-  height: 400px;
-  background-color: green;
-`;
-
+import TopBanner from "@components/templates/TopBanner";
 const Events = styled.div`
   width: 100%;
   height: 398px;
@@ -44,7 +37,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <TopBanner>캐러셀 </TopBanner>
+      <TopBanner></TopBanner>
       <Events>카운트다운</Events>
       <ItemsOnSale>판매중인 아이템</ItemsOnSale>
       <OpenseaTopCollections>오픈시 탑 컬랙션</OpenseaTopCollections>
