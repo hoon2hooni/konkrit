@@ -5,12 +5,7 @@ import TopBanner from "@components/templates/TopBanner";
 import Events from "@components/templates/Events";
 import ItemsOnSale from "@components/templates/ItemsOnSale";
 import OpenseaTopCollctions from "@components/templates/OpenseaTopCollections";
-
-const Onboarding = styled.div`
-  height: 415px;
-  background-color: teal;
-  margin-bottom: 100px;
-`;
+import Onboarding from "@components/templates/Onboarding";
 
 const Footer = styled.footer`
   height: 240px;
