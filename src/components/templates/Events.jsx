@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const shine = keyframes`
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 200%;
+  }
+`;
+
 const Container = styled.div`
   width: 100%;
   height: 398px;
@@ -69,7 +80,7 @@ const InLineBlockWrapper = styled.div`
   margin-left: 16px;
 `;
 
-const GradientLogo = styled.span`
+const GradientAnimationSectionTitle = styled.span`
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   font-family: Pretendard-Bold;
@@ -81,9 +92,11 @@ const GradientLogo = styled.span`
     #50d7ff 76.04%,
     #ffff32
   );
-  background-clip: text;
-  -webkit-background-clip: text;
 
+  background-clip: text;
+  animation: ${shine} 4s linear infinite;
+  -webkit-background-clip: text;
+  background-size: 200% auto;
   width: auto;
 `;
 
@@ -118,7 +131,7 @@ function Events() {
   return (
     <Container>
       <EventsTopWrapper>
-        <GradientLogo>KONKRIT Originals</GradientLogo>
+        <GradientAnimationSectionTitle>KONKRIT Originals</GradientAnimationSectionTitle>
         <EventLink>이벤트 전체보기</EventLink>
       </EventsTopWrapper>
       <EventCardsWrapper>
