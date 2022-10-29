@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     font-style: normal;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+  
 `;
 
 export default GlobalStyle;
