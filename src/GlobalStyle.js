@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import PretendardMedium from "@assets/fonts/Pretendard-Medium.woff";
+import MarkProHeavy from "@assets/fonts/MarkPro-Heavy.woff2";
+
 const GlobalStyle = createGlobalStyle`
   ${reset}
   body {
@@ -8,8 +9,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'Pretendard-Medium';
-    src: url(${PretendardMedium}) format('woff');
+    font-family: 'MarkPro-Heavy';
+    src: url(${MarkProHeavy}) format('woff2');
     font-weight: 500;
     font-style: normal;
   }
