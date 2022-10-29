@@ -4,14 +4,9 @@ import Header from "@components/templates/Header";
 import TopBanner from "@components/templates/TopBanner";
 import Events from "@components/templates/Events";
 import ItemsOnSale from "@components/templates/ItemsOnSale";
-import OpenseaTopCollctions from "@components/templates/OpenseaTopCollections";
+import OpenseaTopCollections from "@components/templates/OpenseaTopCollections";
 import Onboarding from "@components/templates/Onboarding";
-
-const Footer = styled.footer`
-  height: 240px;
-  width: 100%;
-  background-color: floralwhite;
-`;
+import Footer from "@components/templates/Footer";
 
 function App() {
   return (
@@ -21,7 +16,7 @@ function App() {
       <TopBanner></TopBanner>
       <Events></Events>
       <ItemsOnSale />
-      <OpenseaTopCollctions />
+      <OpenseaTopCollections />
       <Onboarding>온보딩</Onboarding>
       <Footer>푸터</Footer>
     </>
