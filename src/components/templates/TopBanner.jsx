@@ -13,8 +13,7 @@ const Container = styled.div`
 `;
 
 const StyledSlider = styled(Slider)`
-  width: 100%;
-  height: 400px;
+  height: 360px;
 `;
 
 const settings = {

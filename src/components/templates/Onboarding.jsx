@@ -6,9 +6,8 @@ import OnBoardFaq from "@assets/image/onboard_faq.png";
 
 const Container = styled.div`
   padding: 40px 16px;
-
-  margin-bottom: 100px;
 `;
+
 const SectionWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -17,7 +16,6 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.span`
   font-size: 18px;
-
   font-weight: 700;
 `;
 

@@ -5,6 +5,7 @@ import Divider from "@components/atoms/Divider";
 const Container = styled.div`
   padding: 16px;
   background-color: black;
+  margin-top: 100px;
 `;
 
 const FooterText = styled.span`

@@ -6,7 +6,7 @@ const BannerWrapper = styled.div`
   background-position: 50% 50%;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 360px;
   padding: 40px 20px;
   overflow: hidden;
   border-top-right-radius: 20px;
