@@ -26,7 +26,8 @@ const BannerOrderBox = styled.div`
   z-index: 10;
   justify-content: center;
   align-items: center;
-  font-family: Pretendard-Medium;
+
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.64);
   font-size: 14px;
 `;
@@ -62,15 +63,12 @@ const BannerTextsWrapper = styled.div`
 const BoldTextTitle = styled.div`
   font-weight: 700;
   font-size: 24px;
-  font-family: Pretendard;
-  color: #ffffff;
 `;
 
 const TextWrapper = styled.div`
   margin-top: 12px;
   font-size: 14px;
-  font-family: Pretendard;
-  color: #ffffff;
+
   text-align: center;
   line-height: 130%;
 `;

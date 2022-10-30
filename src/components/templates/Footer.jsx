@@ -9,8 +9,7 @@ const Container = styled.div`
 
 const FooterText = styled.span`
   color: rgba(255, 255, 255, 0.64);
-  font-family: Pretendard;
-  font-weight: normal;
+
   font-size: 14px;
 `;
 const FooterWrapper = styled.div`

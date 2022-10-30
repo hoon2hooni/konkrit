@@ -6,15 +6,15 @@ const EventTitles = styled.div`
 `;
 
 const EventSubTitle = styled.div`
-  font-family: Pretendard-SemiBold;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.64);
 `;
 
 const EventTitle = styled.div`
-  font-family: Pretendard-Bold;
   font-size: 16px;
-  color: #ffffff;
+  font-weight: 700;
+
   margin-top: 4px;
 `;
 
@@ -41,7 +41,6 @@ const CountDownWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 16px;
-  color: #ffffff;
 `;
 const BoldText = styled.div`
   font-size: 36px;
@@ -53,7 +52,8 @@ const CountUnit = styled.div`
   font-size: 18px;
   line-height: 27px;
   align-self: flex-end;
-  font-family: Pretendard-Medium;
+
+  font-weight: 500;
 `;
 
 const TextWrapper = styled.div`

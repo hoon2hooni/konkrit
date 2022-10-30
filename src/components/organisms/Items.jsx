@@ -18,7 +18,6 @@ const CardImage = styled.img`
 
 const InfoBox = styled.div`
   padding: 16px;
-  background-color: pink;
   width: 150px;
   height: 73px;
   background-color: #27272a;
@@ -26,14 +25,13 @@ const InfoBox = styled.div`
 
 const PriceBox = styled.div`
   padding: 8px 16px 16px 16px;
-  background-color: blue;
   width: 150px;
   background-color: #27272a;
 `;
 
 const CollectionTitle = styled.div`
   font-size: 12px;
-  font-family: Pretendard;
+
   color: rgba(255, 255, 255, 0.64);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -42,9 +40,8 @@ const CollectionTitle = styled.div`
 
 const Title = styled.div`
   font-family: MarkPro-Heavy;
-  font-weight: 800px;
   font-size: 14px;
-  color: #ffffff;
+
   margin-top: 4px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -54,7 +51,7 @@ const Title = styled.div`
 
 const PriceTitle = styled.div`
   font-size: 10px;
-  font-family: Pretendard;
+
   color: rgba(255, 255, 255, 0.64);
   font-weight: 700;
 `;
@@ -66,9 +63,8 @@ const PriceWrapper = styled.div`
 
 const PriceText = styled.div`
   font-family: MarkPro-Heavy;
-  font-weight: 800px;
   font-size: 14px;
-  color: #ffffff;
+
   margin-top: 4px;
   margin-left: 4px;
 `;

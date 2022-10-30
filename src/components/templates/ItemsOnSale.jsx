@@ -14,17 +14,13 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.span`
   font-size: 18px;
-  font-family: Pretendard;
   font-weight: 700;
-  color: #ffffff;
 `;
 
 const ShowAllText = styled.span`
   font-size: 14px;
   color: rgba(255, 255, 255, 0.64);
   margin-right: 4px;
-  font-family: Pretendard;
-  font-weight: 400;
 `;
 
 function ItemsOnSale() {

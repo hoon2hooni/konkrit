@@ -7,7 +7,6 @@ import OpenseaTopCollections from "@components/templates/OpenseaTopCollections";
 import Onboarding from "@components/templates/Onboarding";
 import Footer from "@components/templates/Footer";
 
-
 function App() {
   return (
     <>

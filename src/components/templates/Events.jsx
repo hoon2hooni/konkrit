@@ -29,7 +29,7 @@ const EventsTopWrapper = styled.div`
 const GradientAnimationSectionTitle = styled.span`
   -webkit-text-fill-color: transparent;
   font-size: 18px;
-  font-family: Pretendard-Bold;
+  font-weight: 700;
   background: linear-gradient(
     90deg,
     #ffff32,
@@ -52,7 +52,7 @@ const EventLink = styled.span`
   align-items: center;
   font-size: 14px;
   margin-right: 8px;
-  font-family: Pretendard-Normal;
+
   color: rgba(255, 255, 255, 0.64);
 `;
 
@@ -83,7 +83,6 @@ function Events() {
           title={"아비투스 프리미엄 골프 멤버십 NFT"}
         />
       </HideScrollX>
-      "
     </Container>
   );
 }

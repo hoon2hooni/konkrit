@@ -30,7 +30,6 @@ const CollectionInfo = styled.div`
 
 const RankText = styled.span`
   font-family: MarkPro-Heavy;
-  font-weight: 800;
   size: 14px;
   color: #ffd121;
 `;
@@ -44,9 +43,8 @@ const Thumbnail = styled.img`
 `;
 
 const CollectionName = styled.span`
-  font-family: Pretendard;
   font-weight: 500;
-  color: #ffffff;
+
   margin-left: 12px;
 `;
 
@@ -56,15 +54,12 @@ const PriceWrapper = styled.div`
 
 const PriceText = styled.div`
   font-family: MarkPro-Heavy;
-  font-weight: 800px;
   font-size: 14px;
-  color: #ffffff;
+
   margin-left: 4px;
 `;
 
 const NormalText = styled.span`
-  font-family: Pretendard;
-  font-weight: 400;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.64);
 `;
