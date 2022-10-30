@@ -4,23 +4,7 @@ import OnBoardKonkrit from "@assets/image/onboard_konkrit.png";
 import OnBoardWallet from "@assets/image/onboard_wallet.png";
 import OnBoardFaq from "@assets/image/onboard_faq.png";
 import SectionLayout from "../molecules/SectionLayout";
-
-const SectionWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const SectionTitle = styled.span`
-  font-size: 18px;
-  font-weight: 700;
-`;
-
-const ShowAllText = styled.span`
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.64);
-  margin-right: 4px;
-`;
+import SectionTop from "../molecules/SectionTop";
 
 const OnBoardList = styled.ul`
   display: grid;
@@ -48,10 +32,10 @@ const OnBoardText = styled.div`
 function Onboarding() {
   return (
     <SectionLayout>
-      <SectionWrapper>
-        <SectionTitle>KONKRIT, 이렇게 사용하세요!</SectionTitle>
-        <ShowAllText>가이드 전체보기 </ShowAllText>
-      </SectionWrapper>
+      <SectionTop
+        title={"KONKRIT, 이렇게 사용하세요!"}
+        showAll={"가이드 전체보기"}
+      />
       <OnBoardList>
         <OnBoardItemWrapper>
           <OnBoardImage src={OnBoardNft} alt="nft" />
