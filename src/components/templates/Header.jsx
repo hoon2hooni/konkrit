@@ -5,6 +5,7 @@ import HamburgerIcon from "@components/atoms/HamburgerIcon";
 import * as colors from "@styles/colors";
 import Wallet from "@components/atoms/Wallet";
 import styled from "styled-components";
+import KaiKas_image from "@assets/image/kaikas.png";
 import { useContext } from "react";
 import { AuthContext } from "@contexts/AuthContext";
 
@@ -66,6 +67,11 @@ const MenuBox = styled(GrayRoundBox)`
 //   font-family: MarkPro-Heavy;
 // `;
 
+const KaiKasImage = styled.img`
+  width: 20px;
+  height: 20px;
+`;
+
 function Header() {
   const { user, setUser } = useContext(AuthContext);
   async function loginKaikas() {
@@ -92,12 +98,19 @@ function Header() {
           <SearchIcon />
         </SearchIconWrapper>
       </SearchBarWrapper>
-      <WalletBox
-        onClick={() => {
-          loginKaikas();
-        }}
-      >
-        {user.isLogin ? <MetaMaskIcon /> : <Wallet />}
+      <WalletBox>
+        {user.isLogin ? (
+          <KaiKasImage src={KaiKas_image} />
+        ) : (
+          <div
+            onClick={() => {
+              loginKaikas();
+              console.log("얍ㅇ얍");
+            }}
+          >
+            <Wallet />
+          </div>
+        )}
       </WalletBox>
       <MenuBox>
         <HamburgerIcon />
