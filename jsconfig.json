@@ -5,7 +5,8 @@
       "@components/*": ["./src/components/*"],
       "@assets/*": ["./src/assets/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@contexts/*": ["./src/contexts/*"]
     }
   },
   "exclude": ["node_modules", "build"]

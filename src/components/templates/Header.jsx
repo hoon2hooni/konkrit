@@ -3,7 +3,10 @@ import Logo from "@components/atoms/Logo";
 import MetaMaskIcon from "@components/atoms/MetaMaskIcon";
 import HamburgerIcon from "@components/atoms/HamburgerIcon";
 import * as colors from "@styles/colors";
+import Wallet from "@components/atoms/Wallet";
 import styled from "styled-components";
+import { useContext } from "react";
+import { AuthContext } from "@contexts/AuthContext";
 
 const Container = styled.header`
   width: 100%;
@@ -44,13 +47,41 @@ const GrayRoundBox = styled.div`
 
 const WalletBox = styled(GrayRoundBox)`
   margin-right: 8px;
+  background-color: ${colors.textYellow};
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const MenuBox = styled(GrayRoundBox)`
   margin-right: 20px;
 `;
 
+// const TokenBox = styled`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100px;
+//   height: 40px;
+//   border-radius: 20px;
+//   font-family: MarkPro-Heavy;
+// `;
+
 function Header() {
+  const { user, setUser } = useContext(AuthContext);
+  async function loginKaikas() {
+    if (window.klaytn) {
+      try {
+        const accounts = await window.klaytn.enable();
+        setUser({ tokenId: accounts[0], isLogin: true });
+        localStorage.setItem("persist:auth", accounts[0]);
+      } catch {
+        console.error("에러");
+      }
+    } else {
+      console.log("false");
+    }
+  }
+
   return (
     <Container>
       <LogoWrapper>
@@ -61,8 +92,12 @@ function Header() {
           <SearchIcon />
         </SearchIconWrapper>
       </SearchBarWrapper>
-      <WalletBox>
-        <MetaMaskIcon />
+      <WalletBox
+        onClick={() => {
+          loginKaikas();
+        }}
+      >
+        {user.isLogin ? <MetaMaskIcon /> : <Wallet />}
       </WalletBox>
       <MenuBox>
         <HamburgerIcon />
