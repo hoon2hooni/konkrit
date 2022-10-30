@@ -1,9 +1,9 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import TopBannerImageOne from "@assets/image/tb_image_one.png";
 import TopBannerImageTwo from "@assets/image/tb_image_two.png";
 import EachBanner from "@components/organisms/EachBanner";
 
-import { useState, useEffect } from "react";
+import Slider from "react-slick";
 
 const Container = styled.div`
   margin-top: 64px;
@@ -12,20 +12,23 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const Wrapper = styled.div`
+const StyledSlider = styled(Slider)`
   width: 100%;
-  height: 100%;
+  height: 400px;
 `;
 
-function TopBanner() {
-  const [currentNumber, setCurrentNumber] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => {
-      setCurrentNumber((n) => n + 1);
-    }, 4000);
-    return () => clearInterval(id);
-  }, []);
+const settings = {
+  dots: true,
+  infinite: true,
+  fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+};
 
+function TopBanner() {
   const bannerList = [
     { id: 1, imgUrl: TopBannerImageOne },
     {
@@ -38,14 +41,17 @@ function TopBanner() {
   ];
   const maxNum = bannerList.length;
   const bannerContents = bannerList.map((bannerItem, index) => (
-    <EachBanner {...bannerItem} order={index + 1} maxNum={maxNum} />
+    <EachBanner
+      key={bannerItem.id}
+      {...bannerItem}
+      order={index + 1}
+      maxNum={maxNum}
+    />
   ));
-
-  const currentBanner = bannerContents[currentNumber % 2];
 
   return (
     <Container>
-      <Wrapper key={currentNumber}>{currentBanner}</Wrapper>
+      <StyledSlider {...settings}>{bannerContents}</StyledSlider>
     </Container>
   );
 }

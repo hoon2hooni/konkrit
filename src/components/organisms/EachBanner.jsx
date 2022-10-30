@@ -1,12 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-`;
+import styled from "styled-components";
 
 const BannerWrapper = styled.div`
   background-image: url(${(props) => props.imgUrl});
@@ -14,12 +6,12 @@ const BannerWrapper = styled.div`
   background-position: 50% 50%;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 400px;
   padding: 40px 20px;
   overflow: hidden;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  animation: ${fadeIn} 2s linear;
+  margin-right: 10px;
 `;
 
 const BannerOrderBox = styled.div`
