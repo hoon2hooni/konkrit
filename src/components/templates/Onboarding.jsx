@@ -3,10 +3,7 @@ import OnBoardNft from "@assets/image/onboard_nft.png";
 import OnBoardKonkrit from "@assets/image/onboard_konkrit.png";
 import OnBoardWallet from "@assets/image/onboard_wallet.png";
 import OnBoardFaq from "@assets/image/onboard_faq.png";
-
-const Container = styled.div`
-  padding: 40px 16px;
-`;
+import SectionLayout from "../molecules/SectionLayout";
 
 const SectionWrapper = styled.div`
   display: flex;
@@ -50,7 +47,7 @@ const OnBoardText = styled.div`
 
 function Onboarding() {
   return (
-    <Container>
+    <SectionLayout>
       <SectionWrapper>
         <SectionTitle>KONKRIT, 이렇게 사용하세요!</SectionTitle>
         <ShowAllText>가이드 전체보기 </ShowAllText>
@@ -73,7 +70,7 @@ function Onboarding() {
           <OnBoardText>자주 묻는 질문</OnBoardText>
         </OnBoardItemWrapper>
       </OnBoardList>
-    </Container>
+    </SectionLayout>
   );
 }
 

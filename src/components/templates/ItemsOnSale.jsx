@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import Items from "@components/organisms/Items";
-
-const Container = styled.div`
-  width: 100%;
-  padding: 40px 16px;
-`;
+import SectionLayout from "../molecules/SectionLayout";
 
 const SectionWrapper = styled.div`
   display: flex;
@@ -25,13 +21,13 @@ const ShowAllText = styled.span`
 
 function ItemsOnSale() {
   return (
-    <Container>
+    <SectionLayout>
       <SectionWrapper>
         <SectionTitle>지금 판매중인 아이템</SectionTitle>
         <ShowAllText>아이템 전체보기</ShowAllText>
       </SectionWrapper>
       <Items />
-    </Container>
+    </SectionLayout>
   );
 }
 

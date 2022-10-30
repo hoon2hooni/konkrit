@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import CollectionList from "@components/organisms/CollectionList";
-
-const Container = styled.div`
-  width: 100%;
-
-  padding: 40px 16px;
-`;
+import SectionLayout from "../molecules/SectionLayout";
 
 const SectionWrapper = styled.div`
   display: flex;
@@ -27,13 +22,13 @@ const ShowAllText = styled.span`
 
 function OpenseaTopCollctions() {
   return (
-    <Container>
+    <SectionLayout>
       <SectionWrapper>
         <SectionTitle>많이 거래된 컬렉션</SectionTitle>
         <ShowAllText>오픈씨 데이터 기준</ShowAllText>
       </SectionWrapper>
       <CollectionList />
-    </Container>
+    </SectionLayout>
   );
 }
 

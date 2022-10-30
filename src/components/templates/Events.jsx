@@ -4,6 +4,7 @@ import EventImageOneUrl from "@assets/image/event_one.png";
 import EventImageTwoUrl from "@assets/image/event_two.png";
 import EventImageThreeUrl from "@assets/image/event_three.png";
 import HideScrollX from "@components/atoms/HideScrollX";
+import SectionLayout from "../molecules/SectionLayout";
 const shine = keyframes`
   from {
     background-position: 0%;
@@ -12,12 +13,6 @@ const shine = keyframes`
   to {
     background-position: 200%;
   }
-`;
-
-const Container = styled.div`
-  width: 100%;
-  height: 398px;
-  padding: 40px 16px;
 `;
 
 const EventsTopWrapper = styled.div`
@@ -58,7 +53,7 @@ const EventLink = styled.span`
 
 function Events() {
   return (
-    <Container>
+    <SectionLayout>
       <EventsTopWrapper>
         <GradientAnimationSectionTitle>
           KONKRIT Originals
@@ -83,7 +78,7 @@ function Events() {
           title={"아비투스 프리미엄 골프 멤버십 NFT"}
         />
       </HideScrollX>
-    </Container>
+    </SectionLayout>
   );
 }
 
