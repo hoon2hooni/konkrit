@@ -2,7 +2,7 @@ import SearchIcon from "@components/atoms/SearchIcon";
 import Logo from "@components/atoms/Logo";
 import MetaMaskIcon from "@components/atoms/MetaMaskIcon";
 import HamburgerIcon from "@components/atoms/HamburgerIcon";
-
+import * as colors from "@styles/colors";
 import styled from "styled-components";
 
 const Container = styled.header`
@@ -13,7 +13,7 @@ const Container = styled.header`
   position: fixed;
   top: 0px;
   z-index: 999;
-  background-color: black;
+  background-color: ${colors.bgBlack};
 `;
 
 const LogoWrapper = styled.div`
@@ -36,7 +36,7 @@ const GrayRoundBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #27272a;
+  background-color: ${colors.bgSecondaryBlack};
   border-radius: 20px;
   width: 40px;
   height: 40px;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useCountdown from "@hooks/useCountDown";
+import * as colors from "@styles/colors";
 
 const EventTitles = styled.div`
   margin-top: 16px;
@@ -8,7 +9,7 @@ const EventTitles = styled.div`
 const EventSubTitle = styled.div`
   font-weight: 600;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.64);
+  color: ${colors.textSecondary};
 `;
 
 const EventTitle = styled.div`
@@ -26,11 +27,7 @@ const EventCardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 14px;
-  background-image: ${(props) => `linear-gradient(
-      rgba(0, 0, 0, 0) 48.96%,
-      rgba(0, 0, 0, 0.6) 100%
-    ),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+  background-image: ${(props) => `${colors.cardGradient},
     url(${props.imgUrl})`};
   background-size: cover;
   background-position: 50% 50%;

@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import ModernLionLogo from "@assets/image/modern_lion_logo.png";
 import Divider from "@components/atoms/Divider";
+import * as colors from "@styles/colors";
 
 const Container = styled.div`
   padding: 16px;
-  background-color: black;
+  background-color: ${colors.bgBlack};
   margin-top: 100px;
 `;
 
 const FooterText = styled.span`
-  color: rgba(255, 255, 255, 0.64);
+  color: ${colors.textSecondary};
 
   font-size: 14px;
 `;

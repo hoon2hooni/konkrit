@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Ether from "@components/atoms/Ether";
 import useData from "@hooks/useData";
 import HideScrollX from "@components/atoms/HideScrollX";
+import * as colors from "@styles/colors";
 
 const CardWrapper = styled.div`
   overflow: hidden;
@@ -20,19 +21,19 @@ const InfoBox = styled.div`
   padding: 16px;
   width: 150px;
   height: 73px;
-  background-color: #27272a;
+  background-color: ${colors.bgSecondaryBlack};
 `;
 
 const PriceBox = styled.div`
   padding: 8px 16px 16px 16px;
   width: 150px;
-  background-color: #27272a;
+  background-color: ${colors.bgSecondaryBlack};
 `;
 
 const CollectionTitle = styled.div`
   font-size: 12px;
 
-  color: rgba(255, 255, 255, 0.64);
+  color: ${colors.textSecondary};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -52,7 +53,7 @@ const Title = styled.div`
 const PriceTitle = styled.div`
   font-size: 10px;
 
-  color: rgba(255, 255, 255, 0.64);
+  color: ${colors.textSecondary};
   font-weight: 700;
 `;
 

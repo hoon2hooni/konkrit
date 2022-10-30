@@ -5,6 +5,7 @@ import EventImageTwoUrl from "@assets/image/event_two.png";
 import EventImageThreeUrl from "@assets/image/event_three.png";
 import HideScrollX from "@components/atoms/HideScrollX";
 import SectionLayout from "../molecules/SectionLayout";
+import * as colors from "@styles/colors";
 const shine = keyframes`
   from {
     background-position: 0%;
@@ -25,14 +26,7 @@ const GradientAnimationSectionTitle = styled.span`
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   font-weight: 700;
-  background: linear-gradient(
-    90deg,
-    #ffff32,
-    #ffd121 25.52%,
-    #00e6a0 50%,
-    #50d7ff 76.04%,
-    #ffff32
-  );
+  background: ${colors.textGradient};
 
   background-clip: text;
   animation: ${shine} 4s linear infinite;
@@ -48,7 +42,7 @@ const EventLink = styled.span`
   font-size: 14px;
   margin-right: 8px;
 
-  color: rgba(255, 255, 255, 0.64);
+  color: ${colors.textSecondary};
 `;
 
 function Events() {

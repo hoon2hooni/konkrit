@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useData from "@hooks/useData";
 import Ether from "@components/atoms/Ether";
+import * as colors from "@styles/colors";
 
 const Container = styled.ul`
   margin-top: 16px;
@@ -31,7 +32,7 @@ const CollectionInfo = styled.div`
 const RankText = styled.span`
   font-family: MarkPro-Heavy;
   size: 14px;
-  color: #ffd121;
+  color: ${colors.textYellow};
 `;
 
 const Thumbnail = styled.img`
@@ -39,7 +40,7 @@ const Thumbnail = styled.img`
   height: 40px;
   border-radius: 50%;
   margin-left: 24px;
-  background-color: rgb(63 63 70);
+  background-color: ${colors.bgSecondaryBlack};
 `;
 
 const CollectionName = styled.span`
@@ -61,7 +62,7 @@ const PriceText = styled.div`
 
 const NormalText = styled.span`
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.64);
+  color: ${colors.textSecondary};
 `;
 
 const SecondChild = styled.div`
@@ -69,7 +70,8 @@ const SecondChild = styled.div`
 `;
 
 const NumberText = styled(NormalText)`
-  color: ${({ isPositive }) => (isPositive ? "#22c55e" : "#ef4444")};
+  color: ${({ isPositive }) =>
+    isPositive ? colors.textGreen : colors.textRed};
 `;
 
 function CollectionList() {

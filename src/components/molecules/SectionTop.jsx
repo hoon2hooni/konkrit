@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { textSecondary } from "@styles/colors";
 const SectionWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ const SectionTitle = styled.span`
 
 const ShowAllText = styled.span`
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.64);
+  color: ${textSecondary};
   margin-right: 4px;
 `;
 
