@@ -6,7 +6,7 @@ import OnBoardFaq from "@assets/image/onboard_faq.png";
 
 const Container = styled.div`
   padding: 40px 16px;
-  height: 415px;
+
   margin-bottom: 100px;
 `;
 const SectionWrapper = styled.div`
