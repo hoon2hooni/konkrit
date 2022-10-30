@@ -40,7 +40,7 @@ const Thumbnail = styled.img`
   height: 40px;
   border-radius: 50%;
   margin-left: 24px;
-  background-color: ${colors.bgSecondaryBlack};
+  background-color: ${colors.bgSecondary};
 `;
 
 const CollectionName = styled.span`

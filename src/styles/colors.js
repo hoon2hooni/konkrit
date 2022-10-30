@@ -13,7 +13,7 @@ export const textRed = "#ef4444";
  */
 
 export const bgPrimary = "rgb(24, 24, 27)";
-export const bgSecondaryBlack = "#27272a";
+export const bgSecondary = "#27272a";
 export const bgBlack = "black";
 export const bgBannerButton = "rgba(0,0,0,0.4)";
 

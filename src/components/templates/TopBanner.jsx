@@ -17,7 +17,7 @@ const StyledSlider = styled(Slider)`
 `;
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   fade: true,
   slidesToShow: 1,

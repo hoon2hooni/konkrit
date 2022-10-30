@@ -39,7 +39,7 @@ const GrayRoundBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${colors.bgSecondaryBlack};
+  background-color: ${colors.bgSecondary};
   border-radius: 20px;
   width: 40px;
   height: 40px;

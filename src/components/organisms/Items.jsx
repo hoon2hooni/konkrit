@@ -21,13 +21,13 @@ const InfoBox = styled.div`
   padding: 16px;
   width: 150px;
   height: 73px;
-  background-color: ${colors.bgSecondaryBlack};
+  background-color: ${colors.bgSecondary};
 `;
 
 const PriceBox = styled.div`
   padding: 8px 16px 16px 16px;
   width: 150px;
-  background-color: ${colors.bgSecondaryBlack};
+  background-color: ${colors.bgSecondary};
 `;
 
 const CollectionTitle = styled.div`
