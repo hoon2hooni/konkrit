@@ -1,10 +1,42 @@
-import styled from "styled-components";
-import TopBannerImage from "@assets/image/tb_image_one.png";
-const Container = styled.div`
-  margin-top: 64px;
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+`;
+
+const BannerWrapper = styled.div`
+  background-image: url(${(props) => props.imgUrl});
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
   width: 100%;
-  height: 400px;
-  padding: 20px;
+  height: 100%;
+  padding: 40px 20px;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  animation: ${fadeIn} 2s linear;
+`;
+
+const BannerOrderBox = styled.div`
+  position: absolute;
+  display: flex;
+  width: 51px;
+  height: 29px;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  font-family: Pretendard-Medium;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 14px;
 `;
 
 const TopLeftBox = styled.div`
@@ -27,36 +59,6 @@ const BottomRightBox = styled.div`
   bottom: 0%;
 `;
 
-const BannerWrapper = styled.div`
-  background-image: url(${(props) => props.imgUrl});
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 40px 20px;
-  overflow: hidden;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-`;
-
-const BannerOrderBox = styled.div`
-  position: absolute;
-  display: flex;
-  width: 51px;
-  height: 29px;
-  left: 16px;
-  bottom: 16px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  z-index: 10;
-  justify-content: center;
-  align-items: center;
-  font-family: Pretendard-Medium;
-  color: rgba(255, 255, 255, 0.64);
-  font-size: 14px;
-`;
-
 const BannerTextsWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -64,6 +66,7 @@ const BannerTextsWrapper = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
 const BoldTextTitle = styled.div`
   font-weight: 700;
   font-size: 24px;
@@ -80,7 +83,7 @@ const TextWrapper = styled.div`
   line-height: 130%;
 `;
 
-function EachBanner({ imgUrl, title, firstLine, secondLine }) {
+function EachBanner({ imgUrl, title, firstLine, secondLine, order, maxNum }) {
   return (
     <BannerWrapper imgUrl={imgUrl}>
       <TopLeftBox />
@@ -93,7 +96,9 @@ function EachBanner({ imgUrl, title, firstLine, secondLine }) {
           {secondLine}
         </TextWrapper>
       </BannerTextsWrapper>
-      <BannerOrderBox>1 / 2</BannerOrderBox>
+      <BannerOrderBox>
+        {order} / {maxNum}
+      </BannerOrderBox>
     </BannerWrapper>
   );
 }
