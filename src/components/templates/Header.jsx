@@ -83,6 +83,13 @@ function Header() {
       toast.error("다시 로그인해주세요");
     }
   }
+  function handleLogin() {
+    loginWithKaikas();
+  }
+
+  function handleDone() {
+    toast.success(`안녕하세요 ${user.slice(0, 13)}...님`);
+  }
 
   return (
     <Container>
@@ -94,24 +101,8 @@ function Header() {
           <SearchIcon />
         </SearchIconWrapper>
       </SearchBarWrapper>
-      <WalletBox>
-        {user ? (
-          <div
-            onClick={() => {
-              toast.success(`안녕하세요 ${user.slice(0, 13)}...님`);
-            }}
-          >
-            <KaiKasImage src={KaiKas_image} />
-          </div>
-        ) : (
-          <div
-            onClick={() => {
-              loginWithKaikas();
-            }}
-          >
-            <Wallet />
-          </div>
-        )}
+      <WalletBox onClick={user ? handleDone : handleLogin}>
+        {user ? <KaiKasImage src={KaiKas_image} /> : <Wallet />}
       </WalletBox>
       <MenuBox>
         <HamburgerIcon />
