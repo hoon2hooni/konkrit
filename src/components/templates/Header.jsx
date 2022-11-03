@@ -1,13 +1,12 @@
 import SearchIcon from "@components/atoms/SearchIcon";
 import Logo from "@components/atoms/Logo";
-import MetaMaskIcon from "@components/atoms/MetaMaskIcon";
 import HamburgerIcon from "@components/atoms/HamburgerIcon";
 import * as colors from "@styles/colors";
 import Wallet from "@components/atoms/Wallet";
 import styled from "styled-components";
 import KaiKas_image from "@assets/image/kaikas.png";
-import { useContext } from "react";
-import { AuthContext } from "@contexts/AuthContext";
+import useAuth from "@hooks/useAuth";
+import { toast } from "react-toastify";
 
 const Container = styled.header`
   width: 100%;
@@ -57,34 +56,31 @@ const MenuBox = styled(GrayRoundBox)`
   margin-right: 20px;
 `;
 
-// const TokenBox = styled`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100px;
-//   height: 40px;
-//   border-radius: 20px;
-//   font-family: MarkPro-Heavy;
-// `;
-
 const KaiKasImage = styled.img`
   width: 20px;
   height: 20px;
 `;
 
 function Header() {
-  const { user, setUser } = useContext(AuthContext);
-  async function loginKaikas() {
-    if (window.klaytn) {
-      try {
-        const accounts = await window.klaytn.enable();
-        setUser({ tokenId: accounts[0], isLogin: true });
-        localStorage.setItem("persist:auth", accounts[0]);
-      } catch {
-        console.error("에러");
-      }
-    } else {
-      console.log("false");
+  const { user, setUser } = useAuth();
+  async function loginWithKaikas() {
+    const provider = window?.klaytn;
+    if (!provider) {
+      toast.error("Kaikas를 설치해주세요 !", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return;
+    }
+
+    try {
+      const accounts = await toast.promise(provider.enable(), {
+        pending: "Kaikas 지갑 연결중",
+      });
+      setUser(accounts[0]);
+      localStorage.setItem("_user", accounts[0]);
+      toast.success(`안녕하세요 ${accounts[0].slice(0, 13)}...님`);
+    } catch {
+      toast.error("다시 로그인해주세요");
     }
   }
 
@@ -99,13 +95,18 @@ function Header() {
         </SearchIconWrapper>
       </SearchBarWrapper>
       <WalletBox>
-        {user.isLogin ? (
-          <KaiKasImage src={KaiKas_image} />
+        {user ? (
+          <div
+            onClick={() => {
+              toast.success(`안녕하세요 ${user.slice(0, 13)}...님`);
+            }}
+          >
+            <KaiKasImage src={KaiKas_image} />
+          </div>
         ) : (
           <div
             onClick={() => {
-              loginKaikas();
-              console.log("얍ㅇ얍");
+              loginWithKaikas();
             }}
           >
             <Wallet />

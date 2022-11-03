@@ -1,9 +1,8 @@
 import { AuthContext } from "@contexts/AuthContext";
-
 import { useState } from "react";
 
-function AuthContextWrapper({ children }) {
-  const [user, setUser] = useState({ tokenId: "", isLogin: false });
+function AuthProvider({ children }) {
+  const [user, setUser] = useState("");
   return (
     <AuthContext.Provider value={{ user, setUser }}>
       {children}
@@ -11,4 +10,4 @@ function AuthContextWrapper({ children }) {
   );
 }
 
-export default AuthContextWrapper;
+export default AuthProvider;
