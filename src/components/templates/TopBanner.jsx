@@ -18,13 +18,14 @@ const StyledSlider = styled(Slider)`
 
 const settings = {
   dots: false,
+  arrows: false,
   infinite: true,
-  fade: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000,
-  arrows: false,
+  speed: 6000,
+  autoplaySpeed: 6000,
+  cssEase: "linear",
 };
 
 function TopBanner() {
